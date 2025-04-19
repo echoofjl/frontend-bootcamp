@@ -90,7 +90,7 @@ body {
     text-decoration: line-through;
 }
 
-.todo-item {
+.task-item {
     display: flex;
     align-items: center;
     padding: 12px;
@@ -102,19 +102,22 @@ body {
     background-color: #f8f9fa;
 }
 
-.todo-checkbox {
+.task-checkbox {
     margin-right: 12px;
     width: 18px;
     height: 18px;
     cursor: pointer;
 }
 
-.todo-text {
+.task-text {
     flex-grow: 1;
     font-size: 1em;
     color: #333;
 }
 
+
+
+/* Fix for delete-btn */
 .delete-btn {
     background: none;
     border: none;
@@ -126,14 +129,4 @@ body {
 
 .delete-btn:hover {
     color: #c82333;
-}
-
-/* 已完成任务的样式 */
-.completed-list .todo-item {
-    background-color: #f8f9fa;
-}
-
-.completed-list .todo-text {
-    text-decoration: line-through;
-    color: #6c757d;
 }
