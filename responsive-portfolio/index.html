@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Portfolio</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="header">
+    <img src="images/avatar.jpg" alt="My Avatar" class="avatar" />
+    <h1>Hi, I'm Jane Doe</h1>
+    <p>Front-end Developer | JavaScript Enthusiast</p>
+  </header>
+
+  <section class="about fade-in">
+    <h2>About Me</h2>
+    <p>I love building interactive web experiences using HTML, CSS, and React. Currently learning full-stack development.</p>
+  </section>
+  
+
+  <section class="skills fade-in">
+    <h2>Skills</h2>
+    <ul>
+      <li>HTML5</li>
+      <li>CSS3</li>
+      <li>JavaScript</li>
+      <li>React</li>
+      <li>Git & GitHub</li>
+    </ul>
+  </section>
+
+  <section class="projects fade-in">
+    <h2>Projects</h2>
+    <ul>
+      <li><a href="#">Todo App</a></li>
+      <li><a href="#">Portfolio Page</a></li>
+    </ul>
+  </section>
+
+  <footer class="footer">
+    <p>📧 jane.doe@example.com | <a href="https://github.com/janedoe" target="_blank">GitHub</a></p>
+  </footer>
+
+  <script>
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, {
+      threshold: 0.1
+    });
+  
+    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>
